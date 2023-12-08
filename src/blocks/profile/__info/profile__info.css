@@ -1,0 +1,22 @@
+.profile__info {
+    color: #ffffff;
+    margin: 0%;
+    padding: 0%;
+    margin-left: 30px;
+    display: grid;
+    grid-template-columns: minmax(min-content, max-content) minmax(min-content, max-content);
+    align-items: center;
+    box-sizing: border-box;
+    gap: 16px 18px;
+}
+
+@media screen and (max-width:650px) {
+    .profile__info {
+        margin: 0px auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 14px 10px;
+    }
+
+}
