@@ -18,27 +18,29 @@ import Da from '../images/Da.svg';
 import Net from '../images/Net.svg';
 
 function App() {
-    const [isEditAvatarPopupOpen, setIsEditAvatarPopupOpen] = React.useState(false);
-    const [isEditProfilePopupOpen, setIsEditProfilePopupOpen] = React.useState(false);
-    const [isAddPlacePopupOpen, setIsAddPlacePopupOpen] = React.useState(false);
-    const [selectedCard, setSelectedCard] = React.useState({})
-    const [isImageOpen, setIsImageOpen] = React.useState(false);
-    const [currentUser, setCurrentUser] = React.useState({});
-    const [cards, setCards] = React.useState([]);
+    const [isEditAvatarPopupOpen, setIsEditAvatarPopupOpen] = useState(false);
+    const [isEditProfilePopupOpen, setIsEditProfilePopupOpen] = useState(false);
+    const [isAddPlacePopupOpen, setIsAddPlacePopupOpen] = useState(false);
+    const [selectedCard, setSelectedCard] = useState({})
+    const [isImageOpen, setIsImageOpen] = useState(false);
+    const [currentUser, setCurrentUser] = useState({});
+    const [cards, setCards] = useState([]);
     const Navigate = useNavigate();
-    const [isLoggedIn, setIsLoggedIn] = React.useState(false);
-    const [email, setEmail] = React.useState('');
-    const [responseImage, setResponseImage] = React.useState('');
-    const [responseTitle, setResponseTitle] = React.useState('');
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
+    const [email, setEmail] = useState('');
+    const [responseImage, setResponseImage] = useState('');
+    const [responseTitle, setResponseTitle] = useState('');
     const [isInfoTooltip, setIsInfoTooltip] = useState(false);
     React.useEffect(() => {
-        Promise.all([api.getUserData(), api.getInitialCards()]).then(([userData, cards]) => {
-            setCurrentUser(userData);
-            setCards(cards);
-        }).catch((err) => {
-            console.log(`Ошибка ${err}`)
-        });
-    }, []);
+        if (isLoggedIn) {
+            Promise.all([api.getUserData(), api.getInitialCards()]).then(([userData, cards]) => {
+                setCurrentUser(userData);
+                setCards(cards);
+            }).catch((err) => {
+                console.log(`Ошибка ${err}`)
+            });
+        }
+    }, [isLoggedIn]);
 
     function handleEditAvatarClick() {
         setIsEditAvatarPopupOpen(true);
