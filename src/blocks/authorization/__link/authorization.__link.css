@@ -1,0 +1,10 @@
+.authorization__link {
+    color: #fff;
+    padding-left: 5px;
+    transition: ease-in-out 0.5s;
+    cursor: pointer;
+}
+
+.authorization__link:hover {
+    opacity: 0.8;
+}

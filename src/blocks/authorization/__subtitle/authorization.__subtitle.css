@@ -1,0 +1,9 @@
+.authorization__subtitle {
+    color: #fff;
+    margin-top: 15px;
+    font-size: 14px;
+    line-height: 17px;
+    font-weight: 400;
+    display: flex;
+    flex-direction: row;
+}

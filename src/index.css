@@ -5,6 +5,8 @@
 /*    HEADER    */
 @import url(./blocks/header/header.css);
 @import url(./blocks/header/__logo/header__logo.css);
+@import url(./blocks/header/__auth-area/header__auth-area.css);
+@import url(./blocks/header/__link/header__link.css);
 /*    PROFILE   */
 @import url(./blocks/profile/profile.css);
 @import url(./blocks/profile/__add-mesto/profile__add-mesto.css);
@@ -47,3 +49,14 @@
 @import url(./blocks/popup/__field/popup__field.css);
 @import url(./blocks/popup/__submit/_disabled/popup__submit_disabled.css);
 @import url(./blocks/popup/__input/_type/popup__input_type_error.css);
+@import url(./blocks/popup/__image/popup__image.css);
+@import url(./blocks/popup/__info/popup__info.css);
+@import url(./blocks/popup/__message/popup__message.css);
+/*     AUTHORIZATION     */
+@import url(./blocks/authorization/authorization.css);
+@import url(./blocks/authorization/__button/authorization.__button.css);
+@import url(./blocks/authorization/__form/authorization.__form.css);
+@import url(./blocks/authorization/__input/authorization.__input.css);
+@import url(./blocks/authorization/__link/authorization.__link.css);
+@import url(./blocks/authorization/__subtitle/authorization.__subtitle.css);
+@import url(./blocks/authorization/__title/authorization.__title.css);
